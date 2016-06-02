@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	#header {
+		width:100%;
+		min-height: 30px;
+		border: 5px solid black;
+	}
+	#main {
+		width:100%;
+		border: 3px solid red;
+		position: absolute;
+		top: 0%;
+		z-index: -1;
+	}
+	#main-img {
+		float: left;
+		width:100%;
+		opacity: .2;
+		z-index: -1;
+	}
+	#box {
+		position: absolute;
+		left: 0%;
+		top:30%;
+		width: 50%;
+		opacity: 1;
+		/*transition: width 5s ease, opacity 6s linear;*/
+		transition: opacity 2s ease, width 2s linear;
+	}
+
+#box:hover{ /*hover animation*/
+	opacity: .2;
+	width:40%;
+}
+#box:hover ~ #box2 { /*sibling animation*/
+	transform: rotate(45deg);
+
+}
+	#box2 {
+		position: absolute;
+		left: 40%;
+		top:30%;
+		width: 50%;
+		transition: transform .5s linear;
+	}
+	</style>
+	<title>
+	</title>
+	<!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>-->
+</head>
+<body>
+	<div id="header">
+		Atom
+	</div>
+	<div id="main">
+		<img id="main-img" src="box.jpg">
+		<img id="box" src="bluebox.png">
+		<img id="box2" src="bluebox.png">
+	</div>
+	<div id="normal">
+		<p>
+			Loves cheeseburgers tuxedo cats always looking dapper
+
+		</p>
+	</div>
+
+</body>
+</html>
